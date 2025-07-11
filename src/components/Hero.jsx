@@ -77,7 +77,7 @@ export default function Hero() {
           aria-hidden="true"
         >
           <div
-            className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-br from-red-900 via-red-900 to-red-500 opacity-30 blur-2xl"
+            className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-br  opacity-30 blur-2xl"
             style={{
               clipPath:
                 'polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%)',
