@@ -62,7 +62,7 @@ const Footer = () => {
                   </div>
 
               
-                  <div className="flex flex-col sm:flex-row gap-8 mr-2">
+                  <div className="flex flex-col sm:flex-row gap-8 mb-2 mt-2 mr-2">
                     
                     <div>
                       <h4 className="mb-1 text-lg font-bold text-dark dark:text-white">Customer Services</h4>
@@ -85,7 +85,7 @@ const Footer = () => {
 
 
                 {/* Email */}
-                <div className="mb-8 flex w-full max-w-[370px]">
+                <div className="mb-8  flex w-full max-w-[370px]">
                   <div className="mr-6 flex h-[60px] w-full max-w-[60px] items-center justify-center overflow-hidden rounded bg-primary/5 text-primary sm:h-[70px] sm:max-w-[70px]">
                     {/* Email Icon */}
                     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
