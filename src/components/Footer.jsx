@@ -41,48 +41,48 @@ const Footer = () => {
                   </div>
                 </div>
 
-               {/* Phone Contact Block (with icon on left, two sections side-by-side) */}
-<div className="flex items-start bg-opacity-10 mb-1.5 max-w-md mx-auto sm:mx-0">
-  {/* Icon Box */}
-  <div className="flex-shrink-0 mr-4 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/10 text-primary">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      className="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M3 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.2 3.6a1 1 0 01-.23 1.06l-1.5 1.5a16.001 16.001 0 006.28 6.28l1.5-1.5a1 1 0 011.06-.23l3.6 1.2a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"
-      />
-    </svg>
-  </div>
+                {/* Phone Contact Block (with icon on left, two sections side-by-side) */}
+                <div className="flex items-start bg-opacity-10 mb-1.5 max-w-md mx-auto sm:mx-0">
+                  {/* Icon Box */}
+                  <div className="flex-shrink-0 mr-4 flex h-[60px] w-[60px] items-center justify-center rounded bg-primary/10 text-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="h-6 w-6"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M3 5a2 2 0 012-2h1.28a1 1 0 01.95.68l1.2 3.6a1 1 0 01-.23 1.06l-1.5 1.5a16.001 16.001 0 006.28 6.28l1.5-1.5a1 1 0 011.06-.23l3.6 1.2a1 1 0 01.68.95V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"
+                      />
+                    </svg>
+                  </div>
 
-  {/* Text Block */}
-  <div className="flex flex-col sm:flex-row gap-8">
-    {/* Customer Services */}
-    <div>
-      <h4 className="mb-1 text-lg font-bold text-dark dark:text-white">Customer Services</h4>
-      <p className="text-sm dark:text-dark-6">
-        (+91) 9652442433<br />
-        (+91) 7097863623
-      </p>
-    </div>
+              
+                  <div className="flex flex-col sm:flex-row gap-8 mr-2">
+                    
+                    <div>
+                      <h4 className="mb-1 text-lg font-bold text-dark dark:text-white">Customer Services</h4>
+                      <p className="text-sm dark:text-dark-6">
+                        (+91) 9652442433<br />
+                        (+91) 7097863623
+                      </p>
+                    </div>
 
-    {/* Sales */}
-    <div>
-      <h4 className="mb-1 text-lg font-bold text-dark dark:text-white">Sales</h4>
-      <p className="text-sm dark:text-dark-6">
-        (+91) 9652442433<br />
-        (+91) 7097863623
-      </p>
-    </div>
-  </div>
-</div>
- 
+                    {/* Sales */}
+                    <div>
+                      <h4 className="mb-1 text-lg font-bold text-dark dark:text-white">Sales</h4>
+                      <p className="text-sm dark:text-dark-6">
+                        (+91) 9652442433<br />
+                        (+91) 7097863623
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
 
                 {/* Email */}
                 <div className="mb-8 flex w-full max-w-[370px]">
