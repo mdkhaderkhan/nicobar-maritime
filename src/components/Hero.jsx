@@ -12,36 +12,13 @@ const navigation = [
 export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const slides = [
-    {
-      image: '/freight1.jpg',
-      heading: 'Empowering Global Supply Chains',
-      subheading: 'with Nicobar Maritime Services',
-      description:
-        'Fast, secure, and intelligent freight logistics tailored for your industry — with global reach, real-time tracking, and personalized service.',
-    },
-    {
-      image: '/freight2.jpg',
-      heading: 'Connecting Continents with Confidence',
-      subheading: 'Your cargo, our priority',
-      description:
-        'We ensure reliable maritime freight delivery with cutting-edge technology and unmatched global coverage.',
-    },
-    {
-      image: '/freight3.jpg',
-      heading: 'Efficient. Reliable. Global.',
-      subheading: 'Nicobar Maritime Services',
-      description:
-        'Experience seamless logistics from port to port with our expert team and optimized routes.',
-    },
-  ];
-
+  const slides = ['/freight1.jpg', '/freight2.jpg', '/freight3.jpg'];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
@@ -110,50 +87,37 @@ export default function Hero() {
 
       {/* Hero Section */}
       <div className="relative isolate pt-28 pb-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        {/* Background blob */}
-        <div className="absolute inset-0 -z-10" aria-hidden="true">
-          <div
-            className="absolute top-[-100px] left-1/2 transform -translate-x-1/2 w-[1200px] h-[800px] bg-gradient-to-br opacity-30 blur-2xl"
-            style={{
-              clipPath:
-                'polygon(50% 0%, 80% 20%, 100% 50%, 80% 80%, 50% 100%, 20% 80%, 0% 50%, 20% 20%)',
-            }}
-          ></div>
-        </div>
+        {/* Slide Background */}
+        <div className="relative w-full h-[600px] sm:h-[700px] rounded-2xl overflow-hidden shadow-xl">
+          {/* Background Image */}
+          <img
+            src={slides[currentIndex]}
+            alt="Background slide"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000"
+          />
 
-        {/* Full Slide with content and image */}
-        <div className="relative w-full h-[500px] sm:h-[600px] rounded-2xl overflow-hidden shadow-xl">
-          {slides.map((slide, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out flex items-center justify-center ${
-                index === currentIndex ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
+          {/* Overlay for contrast */}
+          <div className="absolute inset-0 bg-black/50 backdrop-brightness-75"></div>
+
+          {/* Centered Content */}
+          <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4 sm:px-8 max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-400 to-red-500 bg-clip-text text-transparent drop-shadow-lg animate-pulse">
+              Empowering Global Supply Chains
+            </h1>
+            <h2 className="text-lg sm:text-2xl mt-3 font-semibold text-white">
+              with Nicobar Maritime Services
+            </h2>
+            <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/90 max-w-xl">
+              Fast, secure, and intelligent freight logistics tailored for your industry —
+              with global reach, real-time tracking, and personalized service.
+            </p>
+            <a
+              href="#services"
+              className="mt-6 inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-300 to-pink-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
             >
-              <img
-                src={slide.image}
-                alt={slide.heading}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="relative text-center text-white px-4 sm:px-8 max-w-3xl">
-                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-400 to-red-500 bg-clip-text text-transparent drop-shadow-md animate-pulse">
-                  {slide.heading}
-                </h1>
-                <h2 className="text-xl sm:text-2xl mt-2 font-semibold text-white">
-                  {slide.subheading}
-                </h2>
-                <p className="mt-4 sm:mt-6 text-base sm:text-lg text-white/90">
-                  {slide.description}
-                </p>
-                <a
-                  href="#services"
-                  className="mt-6 inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-300 to-pink-500 text-black font-semibold rounded-full shadow-md hover:scale-105 transition duration-300"
-                >
-                  🚀 Explore Services
-                </a>
-              </div>
-            </div>
-          ))}
+              🚀 Explore Services
+            </a>
+          </div>
         </div>
       </div>
     </div>
