@@ -97,7 +97,7 @@ export default function Hero() {
           />
 
           {/* Overlay for contrast */}
-          <div className="absolute inset-0 bg-black/50 backdrop-brightness-75"></div>
+          <div className="absolute inset-0 bg-black/20 backdrop-brightness-75"></div>
 
           {/* Centered Content */}
           <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4 sm:px-8 max-w-4xl mx-auto">
