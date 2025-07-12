@@ -26,10 +26,11 @@ export default function Hero() {
     <div className="bg-white">
       {/* Header */}
       <header className="absolute inset-x-0 top-0 z-50">
-        <nav className="flex items-center justify-between px-4 py-4 sm:px-6 lg:px-8 bg-[#e8b641] shadow-md">
+        <nav className="flex items-center justify-between px-3 py-2 sm:px-6 lg:px-8 text-[#35708a] bg-slate-300 shadow-md">
           <div className="flex items-center">
-            <img className="h-12 w-12 mr-3" src="/nicobar.png" alt="Nicobar Logo" />
-            <span className="text-xl sm:text-2xl font-bold text-[#1f2937] tracking-wide">
+          <img className="h-20 w-18 sm:h-14 sm:w-14 mr-1" src="/nicobar.png" alt="Nicobar Logo" />
+
+            <span className="text-xl sm:text-2xl font-bold text-[#174f67] tracking-wide">
               NICOBAR MARITIME
             </span>
           </div>

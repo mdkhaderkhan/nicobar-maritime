@@ -10,8 +10,8 @@ const Services = () => {
   return (
     <>
       <section id="services" className="bg-gray-2 pb-10  dark:bg-dark lg:pb-20 lg:pt-[20px] flex w-full ">
-        <div className=" w-full flex flex-col items-center justify-center"> <h1 className=" font-bold text-[#e8b641] flex items-center justify-center text-5xl mb-10 ">Services</h1>
-          <div className="grid gap-2   sm:grid-cols-2 lg:grid-cols-4 bg-[#e8b641] rounded-xl shadow-lg  justify-center items-center ">
+        <div className=" w-full flex flex-col items-center justify-center"> <h1 className=" font-bold text-[#174f67] flex items-center justify-center text-5xl mb-10 ">Services</h1>
+          <div className="grid gap-2   sm:grid-cols-2 lg:grid-cols-4   bg-slate-300 rounded-xl shadow-lg  justify-center items-center ">
             <div className="relative flex items-start justify-center ">
               <GiCargoShip className="absolute text-white text-5xl hover:text-black mt-2" />
               <SingleCard
