@@ -6,7 +6,7 @@ const navigation = [
   { name: 'Home', href: '#' },
   { name: 'About us', href: '#Aboutus' },
   { name: 'Services', href: '#services' },
-  { name: 'Contact us', href: '#contactus' },
+  { name: 'Contact', href: '#contactus' },
 ];
 
 export default function Hero() {
@@ -102,10 +102,10 @@ export default function Hero() {
 
           {/* Centered Content */}
           <div className="relative z-10 flex flex-col items-center justify-center text-center h-full px-4 sm:px-8 max-w-4xl mx-auto">
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-yellow-300 via-pink-400 to-red-500 bg-clip-text text-transparent drop-shadow-lg animate-pulse">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold  bg-gradient-to-r from-sky-400 via-sky-400 to-[#0EA5E9]  bg-clip-text text-transparent drop-shadow-lg animate-pulse">
               Empowering Global Supply Chains
             </h1>
-            <h2 className="text-lg sm:text-2xl mt-3 font-semibold text-white">
+            <h2 className="text-lg sm:text-2xl mt-3 font-semibold text-sky-300">
               with Nicobar Maritime Services
             </h2>
             <p className="mt-4 sm:mt-6 text-sm sm:text-lg text-white/90 max-w-xl">
@@ -114,7 +114,7 @@ export default function Hero() {
             </p>
             <a
               href="#services"
-              className="mt-6 inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-blue-300 to-pink-500 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
+              className="mt-6 inline-block px-6 sm:px-8 py-3 bg-gradient-to-r from-sky-300 to-[#4F46E5] text-black font-semibold rounded-full shadow-lg hover:scale-105 transition duration-300"
             >
               🚀 Explore Services
             </a>

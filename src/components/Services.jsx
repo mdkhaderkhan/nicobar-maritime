@@ -6,38 +6,47 @@ import { MdWarehouse } from 'react-icons/md';
 import { FaBoxOpen } from 'react-icons/fa';
 import { HiMapPin } from "react-icons/hi2";
 import { TbContainer } from 'react-icons/tb';
+import { Link } from 'react-router-dom';
 const Services = () => {
   return (
     <>
-      <section id="services" className="bg-gray-2 pb-10  dark:bg-dark lg:pb-20 lg:pt-[20px] flex w-full ">
+      <section id="services" className="bg-gray-2 pb-10  dark:bg-dark lg:pb-20 lg:pt-[20px] flex w-full  ">
         <div className=" w-full flex flex-col items-center justify-center"> <h1 className=" font-bold text-[#174f67] flex items-center justify-center text-5xl mb-10 ">Services</h1>
           <div className="grid gap-2   sm:grid-cols-2 lg:grid-cols-4   bg-slate-300 rounded-xl shadow-lg  justify-center items-center ">
-            <div className="relative flex items-start justify-center ">
-              <GiCargoShip className="absolute text-white text-5xl hover:text-black mt-2" />
-              <SingleCard
-                CardTitle="International Sea Freight"
-                titleHref="/#"
-                btnHref="/#"
-                CardDescription="Reliable and cost-effective shipping solutions for global trade. We handle full container loads (FCL) and less than container loads (LCL) with efficiency, ensuring your cargo reaches its destination safely and on time.    "
-                Button="Read More"
-              />
-            </div>
-
-
-            <div className="relative flex items-start justify-center">
+           <div className="relative flex items-start justify-center">
               <FaPlane className="absolute text-white text-5xl hover:text-black mt-2" />
+
               <SingleCard
-                titleHref="/#"
-                btnHref="/#"
+                titleHref="/services/air-freight"
+                btnHref="/services/air-freight"
                 CardTitle="International Air Freight"
                 CardDescription="Fast and secure air cargo services tailored for urgent and high-value shipments. We provide global coverage with streamlined customs clearance and real-time tracking to ensure on-time delivery and Flexible solutions for all industries. "
                 Button="Read More"
               />
             </div>
+           
+            <div className="relative flex items-start justify-center ">
+
+
+              <GiCargoShip className="absolute text-white text-5xl hover:text-black mt-2" />
+              <SingleCard
+                titleHref="/services/sea-freight"
+                btnHref="/services/sea-freight"
+                CardTitle="International Sea Freight"
+                CardDescription="Our International Sea Freight service offers dependable shipping for businesses of all sizes. From full container loads to smaller shipments, we ensure smooth handling, transparent tracking, and on-time delivery worldwide. 
+
+"
+                Button="Read More"
+              />
+            </div>
+
+
+            
             <div className="relative flex items-start justify-center">
               <MdWarehouse className=" absolute    text-white text-5xl hover:text-black mt-2" />
               <SingleCard
-                image=""
+                titleHref="/services/customs"
+                btnHref="/services/customs"
                 CardTitle="Customs Clearance"
                 CardDescription="Hassle-free customs processing to keep your shipments moving. Our experts ensure full compliance with international regulations, minimizing delays and avoiding unnecessary costs.Let"
                 Button="Read More"
@@ -46,10 +55,9 @@ const Services = () => {
             <div className="relative flex items-start justify-center">
               < FaBoxOpen className="absolute text-white text-5xl mt-2 hover:text-black" />
               <SingleCard
-                image=""
                 CardTitle="Third-Party Logistics Service"
-                titleHref="/#"
-                btnHref="/#"
+                titleHref="/services/thirdparty"
+                btnHref="/services/thirdparty"
                 CardDescription="End-to-end logistics solutions tailored to your business. From warehousing to distribution, we manage your supply chain efficiently so you can focus on growth and customer satisfaction."
                 Button="Read More"
               />
@@ -60,8 +68,8 @@ const Services = () => {
               <SingleCard
                 image=""
                 CardTitle="Transportation Service"
-                titleHref="/#"
-                btnHref="/#"
+                titleHref="/services/transportation"
+                btnHref="/services/transportation"
                 CardDescription="Reliable and timely ground transportation for all types of cargo. We offer flexible fleet options and route optimization to ensure safe and efficient delivery every time."
                 Button="Read More"
               />
@@ -71,8 +79,8 @@ const Services = () => {
               <SingleCard
                 image=""
                 CardTitle="Warehouse Service"
-                titleHref="/#"
-                btnHref="/#"
+                titleHref="/services/warehouse"
+                btnHref="/services/warehouse"
                 CardDescription="Secure and scalable storage solutions for your goods. Our modern facilities offer inventory management, real-time tracking, and seamless integration with your supply chain."
                 Button="Read More"
               />
@@ -82,8 +90,8 @@ const Services = () => {
               <SingleCard
                 image=""
                 CardTitle="Project Cargo Handling"
-                titleHref="/#"
-                btnHref="/#"
+                titleHref="/services/cargo"
+                btnHref="/services/cargo"
                 CardDescription="Specialized logistics for oversized, heavy, or complex shipments. From planning to delivery, we manage every detail with precision, ensuring safe and timely transport of your project cargo."
                 Button="Read More"
               />
@@ -120,28 +128,29 @@ const SingleCard = ({
         <img src={image} alt="" className="w-full" />
         <div className="p-8 text-center sm:p-9 md:p-7 xl:p-9 ">
           <h3>
-            <a
-              href={titleHref ? titleHref : "/#"}
+            <Link
+              to={titleHref ? titleHref : "/#"}
               className="my-6 block text-xl font-semibold text-dark hover:text-primary dark:text-white sm:text-[22px] md:text-xl lg:text-[22px] xl:text-xl 2xl:text-[22px]"
             >
               {CardTitle}
-            </a>
+            </Link>
           </h3>
           <p className="mb-7 text-base leading-relaxed text-body-color dark:text-dark-6">
             {CardDescription}
           </p>
 
           {Button && (
-            <a
-              href={btnHref ? btnHref : "#"}
+            <Link
+              to={btnHref ? btnHref : "/#"}
               className="inline-block rounded-full border border-gray-3 px-7 py-2 text-base font-medium text-body-color transition hover:border-primary hover:bg-primary hover:text-white dark:border-dark-3 dark:text-dark-6"
             >
               {Button}
-            </a>
+            </Link>
           )}
         </div>
       </div>
       {/*  */}
+
     </>
   );
 };

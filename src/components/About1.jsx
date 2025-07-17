@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 const About1 = () => {
   return (
@@ -88,12 +89,13 @@ const About1 = () => {
             </div>
 
             <div className="mt-6 text-center sm:text-left">
-              <a
-                href="#"
+              <Link
+                to="/about"
                 className="inline-block bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-indigo-700 hover:to-blue-700 text-white px-6 py-3 rounded-xl text-sm sm:text-base font-semibold shadow-md transition duration-300"
               >
                 🚀 Get Started
-              </a>
+              </Link>
+
             </div>
           </div>
         </div>
