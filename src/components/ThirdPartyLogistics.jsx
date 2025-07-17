@@ -1,10 +1,28 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaWarehouse, FaTruckMoving, FaChartLine } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ThirdPartyLogistics = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-gray-100 via-slate-50 to-white py-12 px-4 sm:px-8 lg:px-20">
+    <div className="min-h-screen bg-gradient-to-br from-sky-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-16">
+      {/* Logo + Back Button */}
+      <div className="flex justify-between items-center mb-10">
+        <Link to="/">
+          <img
+            src="/nicobar.png"
+            alt="Logo"
+            className="h-20 sm:h-24 lg:h-28 w-auto hover:opacity-80 transition duration-300"
+          />
+        </Link>
+        <Link
+          to="/"
+          className="bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-800 transition duration-300 shadow-md"
+        >
+          ← Back to Home
+        </Link>
+      </div>
+
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}
@@ -12,27 +30,16 @@ const ThirdPartyLogistics = () => {
         transition={{ duration: 0.6 }}
         className="max-w-5xl mx-auto text-center mb-14"
       >
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-800 mb-4">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-blue-800 mb-4">
           Third-Party Logistics (3PL) Solutions
         </h1>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-lg text-gray-700 max-w-3xl mx-auto">
           End-to-end warehousing, transportation, and distribution support for scalable and efficient supply chains.
         </p>
       </motion.div>
 
       {/* Image Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-        className="mb-16 flex justify-center"
-      >
-        <img
-          src="https://images.unsplash.com/photo-1591375277756-81e186127c9b"
-          alt="3PL logistics"
-          className="rounded-2xl shadow-md w-full max-w-5xl h-auto object-cover"
-        />
-      </motion.div>
+      
 
       {/* Feature Steps */}
       <div className="max-w-4xl mx-auto grid grid-cols-1 gap-10">
@@ -60,7 +67,7 @@ const ThirdPartyLogistics = () => {
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mt-20 text-center"
       >
-        <h2 className="text-3xl font-bold text-slate-700 mb-3">
+        <h2 className="text-3xl font-bold text-blue-700 mb-3">
           Let's Optimize Your Supply Chain
         </h2>
         <p className="text-gray-600 mb-6">
@@ -68,7 +75,7 @@ const ThirdPartyLogistics = () => {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-slate-800 text-white px-6 py-3 rounded-xl text-lg hover:bg-slate-700 transition"
+          className="inline-block bg-blue-700 text-white px-6 py-3 rounded-xl text-lg hover:bg-blue-800 transition"
         >
           Schedule a Consultation
         </a>
@@ -80,11 +87,11 @@ const ThirdPartyLogistics = () => {
 const StepFeature = ({ icon, title, desc }) => (
   <motion.div
     whileHover={{ scale: 1.03 }}
-    className="flex items-start gap-4 border-l-4 border-slate-600 pl-6 py-4 bg-white rounded-xl shadow-sm"
+    className="flex items-start gap-4 bg-white border border-gray-200 shadow-md p-6 rounded-xl"
   >
-    <div className="text-slate-700 mt-1">{icon}</div>
+    <div className="text-blue-600 mt-1">{icon}</div>
     <div>
-      <h3 className="text-xl font-semibold text-slate-800 mb-1">{title}</h3>
+      <h3 className="text-xl font-semibold text-gray-800 mb-1">{title}</h3>
       <p className="text-gray-600">{desc}</p>
     </div>
   </motion.div>

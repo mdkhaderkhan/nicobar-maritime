@@ -2,9 +2,28 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaPlaneDeparture, FaShippingFast, FaMapMarkedAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 export default function AirFreight() {
   return (
     <div className="bg-gradient-to-r from-sky-50 via-blue-100 to-white min-h-screen py-12 px-4 sm:px-8 lg:px-16">
+      
+      {/* 🔝 Top Logo + Back Button */}
+      <div className="mb-10 flex items-center justify-between">
+        <Link to="/">
+          <img
+            src="/nicobar.png" // make sure the image exists in your public folder
+            alt="Logo"
+            className="h-20 sm:h-24 lg:h-28 w-auto hover:opacity-80 transition duration-300"
+          />
+        </Link>
+        <Link
+          to="/"
+          className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition duration-300 shadow-md"
+        >
+          ← Back to Home
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -40 }}

@@ -1,10 +1,29 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaShip, FaGlobe, FaClock } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const SeaFreight = () => {
   return (
     <div className="bg-gradient-to-br from-sky-50 to-blue-100 min-h-screen py-12 px-4 sm:px-8 lg:px-16">
+
+      {/* 🔝 Logo + Back Button */}
+      <div className="flex justify-between items-center mb-10">
+        <Link to="/">
+          <img
+            src="/nicobar.png"
+            alt="Logo"
+            className="h-20 sm:h-24 lg:h-28 w-auto hover:opacity-80 transition duration-300"
+          />
+        </Link>
+        <Link
+          to="/"
+          className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition duration-300 shadow-md"
+        >
+          ← Back to Home
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -30 }}

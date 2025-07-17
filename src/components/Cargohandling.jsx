@@ -1,20 +1,39 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Cargohandling = () => {
   return (
     <div className="bg-[#f8fafc] text-gray-800">
+      
+      {/* 🔝 Logo + Back Button */}
+      <div className="flex justify-between items-center px-4 sm:px-10 py-4">
+        <Link to="/">
+          <img
+            src="/nicobar.png" // ✅ Make sure this image is inside your public folder
+            alt="Logo"
+            className="h-20 sm:h-24 lg:h-28 w-auto hover:opacity-80 transition duration-300"
+          />
+        </Link>
+        <Link
+          to="/"
+          className="bg-blue-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-blue-700 transition duration-300 shadow-md"
+        >
+          ← Back to Home
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <section
         className="relative h-[50vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/project-cargo-bg.jpg')" }}
       >
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl sm:text-5xl font-bold text-white text-center"
+            className="text-4xl sm:text-5xl font-bold text-black text-center"
           >
             Project Cargo Handling Solutions
           </motion.h1>
@@ -60,9 +79,18 @@ const Cargohandling = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {[
-            { title: 'Route & Feasibility Analysis', desc: 'Pre-transport planning including site and route surveys.' },
-            { title: 'Multi-modal Transport', desc: 'Integrated sea, road, rail, and air logistics solutions.' },
-            { title: 'Lifting & Rigging Services', desc: 'Specialized cranes and equipment for heavy lift operations.' },
+            {
+              title: 'Route & Feasibility Analysis',
+              desc: 'Pre-transport planning including site and route surveys.',
+            },
+            {
+              title: 'Multi-modal Transport',
+              desc: 'Integrated sea, road, rail, and air logistics solutions.',
+            },
+            {
+              title: 'Lifting & Rigging Services',
+              desc: 'Specialized cranes and equipment for heavy lift operations.',
+            },
           ].map((item, idx) => (
             <motion.div
               key={idx}
