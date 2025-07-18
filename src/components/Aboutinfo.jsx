@@ -1,6 +1,7 @@
 // src/components/Abc.jsx
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -8,9 +9,28 @@ const fadeUp = {
 };
 
 function Aboutinfo() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#dbeafe] via-[#e0f2fe] to-white text-gray-800 px-6 py-16">
       <div className="max-w-6xl mx-auto">
+        
+        {/* Back Button */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="mb-10"
+        >
+          <button
+            onClick={() => navigate(-1)}
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-5xl text-white px-3  rounded-lg shadow transition duration-200"
+          >
+            ← 
+          </button>
+        </motion.div>
+
         {/* Section Title */}
         <motion.div
           variants={fadeUp}

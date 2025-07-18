@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Cargohandling = () => {
+  // Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[#f8fafc] text-gray-800">
       
@@ -10,7 +15,7 @@ const Cargohandling = () => {
       <div className="flex justify-between items-center px-4 sm:px-10 py-4">
         <Link to="/">
           <img
-            src="/nicobar.png" // ✅ Make sure this image is inside your public folder
+            src="/nicobar.png"
             alt="Logo"
             className="h-20 sm:h-24 lg:h-28 w-auto hover:opacity-80 transition duration-300"
           />
@@ -25,10 +30,10 @@ const Cargohandling = () => {
 
       {/* Hero Section */}
       <section
-        className="relative h-[50vh] bg-cover bg-center"
+        className="relative h-[20vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/project-cargo-bg.jpg')" }}
       >
-        <div className="absolute inset-0  bg-opacity-50 flex items-center justify-center">
+        <div className="absolute inset-0 bg-opacity-50 flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}

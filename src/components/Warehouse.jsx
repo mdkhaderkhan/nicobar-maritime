@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 const Warehouse = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-[#f1f8fd] text-gray-800">
       {/* Logo & Back Button */}
@@ -24,7 +28,7 @@ const Warehouse = () => {
 
       {/* Hero Section */}
       <section
-        className="relative h-[60vh] bg-cover bg-center"
+        className="relative h-[20vh] bg-cover bg-center"
         style={{ backgroundImage: "url('/Freightimg-bg.jpg')" }}
       >
         <div className="absolute inset-0 bg-opacity-20 flex items-center justify-center">
@@ -51,14 +55,16 @@ const Warehouse = () => {
             Safe, Scalable Warehousing
           </h2>
           <p className="text-blue-800 text-lg mb-4">
-            We provide secure, efficient storage for goods of all sizes and types. Whether you require short-term holding or long-term warehousing, we tailor our services to match your needs.
+            We provide secure, efficient storage for goods of all sizes and types.
+            Whether you require short-term holding or long-term warehousing, we
+            tailor our services to match your needs.
           </p>
           <p className="text-blue-700">
-            Our facilities are equipped with climate control, round-the-clock surveillance, and real-time tracking systems to keep your cargo safe and accessible.
+            Our facilities are equipped with climate control, round-the-clock
+            surveillance, and real-time tracking systems to keep your cargo safe and
+            accessible.
           </p>
         </motion.div>
-
-        
       </section>
 
       {/* Features Section */}
@@ -116,7 +122,8 @@ const Warehouse = () => {
           Need Secure Storage for Your Goods?
         </h2>
         <p className="text-blue-700 mb-6">
-          Connect with our team today and find a storage plan that fits your business.
+          Connect with our team today and find a storage plan that fits your
+          business.
         </p>
         <Link
           to="/contact"
@@ -130,4 +137,3 @@ const Warehouse = () => {
 };
 
 export default Warehouse;
-
