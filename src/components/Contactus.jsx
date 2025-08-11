@@ -1,7 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const Contactus = () => {
+  const [info,Setinfo]=useState({
+    name:"",
+    mail:"",
+    subject:"",
+    message:""
+  })
+  const oninputchange=(evt)=>{
+      const newinfo=
+         { ...info, [evt.target.value]: evt.target.value }
+      Setinfo(newinfo);
+  }
+const onsubmit=(e)=>{
+ e.preventDefault();
+console.log(info);
+
+}
   return (
     <div className="bg-[#f8fafc] min-h-screen py-12 px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -19,27 +35,32 @@ const Contactus = () => {
         <form className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <input
+            onChange={oninputchange}
               type="text"
               placeholder="Your Name"
               className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input
+             onChange={oninputchange}
               type="email"
               placeholder="Your Email"
               className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
           <input
+           onChange={oninputchange}
             type="text"
             placeholder="Subject"
             className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <textarea
+           onChange={oninputchange}
             rows="5"
             placeholder="Your Message"
             className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
           <motion.button
+          onClick={onsubmit}
             type="submit"
             whileHover={{ scale: 1.05 }}
             className="w-full bg-blue-700 text-white py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 transition"
